@@ -244,17 +244,34 @@ html, body {
     }
 
     .showcase .showcase-body {
-
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3rem 1rem;
     }
 
-        .showcase .showcase-body h1 {
-            font-family: var(--font-play);
-            font-size: var(--font-size-60);
+    .showcase .showcase-body h1 {
+        font-family: var(--font-play);
+        font-size: 3.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+        .showcase .showcase-body h1 strong {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-theme);
         }
-            .showcase .showcase-body h1 strong {
-                font-weight: var(--font-weight-bold);
-                color: var(--color-theme);
-            }
+
+        .showcase .showcase-body p {
+            display: none;
+        }
+
+        .showcase .showcase-body a {
+        
+        }
+
+    .showcase img {
+        display: none;
+    }
 
 
 
