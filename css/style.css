@@ -55,6 +55,19 @@ html, body {
         color: var(--color-white);
     }
 
+.btn-theme-dark {
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+    .btn-theme-dark:hover {
+        background-color: var(--color-theme);
+        color: var(--color-white);
+    }
+
 .btn-white {
     background-color: var(--color-white);
     color: var(--color-theme);
@@ -84,6 +97,10 @@ html, body {
     color: var(--color-product-outofstock);
 }
 
+.required {
+    color: var(--color-theme);
+}
+
 .section-title {
     padding: 3rem 0;
     color: var(--color-theme-dark);
@@ -102,6 +119,69 @@ html, body {
     .section-title p {
         margin: 1rem 0;
     }
+    
+a {
+    color: var(--color-theme);
+    font-weight: var(--font-weight-regular);
+    text-decoration: none;
+}
+    a:hover {
+        color: var(--color-theme-dark);
+        text-decoration: underline;
+    }
+
+
+.form-theme .card {
+    padding: 1.5rem;
+    border: none;
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-gray-4);
+}
+    .form-theme .card .card-body h1 {
+        font-family: var(--font-roboto);
+        font-weight: var(--font-weight-medium);
+        color: var(--color-theme-dark);
+        font-size: 1.5rem;
+    }
+    
+    .form-theme .card .card-body .card-text {
+        margin: 1.5rem 0;
+        line-height: 2;
+    }
+    
+        .form-theme .card .card-body .card-text a {
+            font-weight: var(--font-weight-medium);
+        }
+    
+        .form-theme .card .card-body .card-text.text-small {
+            color: var(--color-gray-5);
+            font-size: 0.875rem;
+        }
+
+
+
+        .form-theme form input[type=checkbox] {
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+        }
+
+
+    
+        .form-theme form input[type=text],
+        .form-theme form input[type=email], 
+        .form-theme form input[type=password] {
+            display: block;
+            width: 100%;
+            border: none;
+            border-radius: var(--border-radius-small);
+            padding: 0.6rem 0.9rem;
+            margin: 0.2rem 0;
+        }
+            .form-theme form input:focus {
+                outline: 0;
+                box-shadow: 0 0 3px 0 var(--color-gray-0);
+            }
 
 
 
@@ -210,6 +290,42 @@ html, body {
     .main-menu .search {
         flex: 4;
     }
+
+        .main-menu .search #searchboxForm {
+            position: relative;
+            border-radius: var(--border-radius-medium);
+            height: 45px;
+            margin: auto;
+        }
+
+            .main-menu .search #searchboxForm input {
+                position: absolute;
+                border-radius: var(--border-radius-medium);
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: 1px solid var(--color-gray-2);
+                font-size: 0.9rem;
+                padding-left: 1.3rem;
+            }
+            .main-menu .search #searchboxForm button {
+                position: absolute;
+                top: 0;
+                right: -2px;
+                width: 50px;
+                height: 100%;
+                background-color: var(--color-theme);
+                color: var(--color-white);
+                border: none;
+                border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
+                transition: 0.3s ease-in-out;
+            }
+            .main-menu .search #searchboxForm button:hover {
+                background-color: var(--color-theme-dark);
+            }
+
+
+
 
     .main-menu .menu-links {
         flex: 3;
@@ -606,39 +722,92 @@ html, body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
-    }
-
-    .signup-signin .card {
+        align-items: start;
 
     }
-        .signup-signin .card .card-body {
-            
+
+.external-logins {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+    .external-logins .label {
+        background-color: var(--color-gray-4);
+        padding: 0 1rem;
+    }
+        .external-logins .line {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            border: 1px solid var(--color-gray-0);
+            z-index: -1;
+            opacity: 0.5;
         }
-            .signup-signin .card .card-body h1 {
-                font-family: var(--font-roboto);
-                font-weight: var(--font-weight-medium);
-                color: var(--color-theme-dark);
-                font-size: 1.5rem;
+
+.external-socialmedia-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+    .external-socialmedia-buttons .facebook-button {
+        text-align: left;
+    }
+
+    .external-socialmedia-buttons .facebook-button button {
+        background-image: url(../images/buttons/facebook-login-button.svg);
+        background-repeat: no-repeat;
+        border: none;
+        height: 42px;
+        width: 235px;
+    }
+    .external-socialmedia-buttons .google-button {
+        text-align: right;
+    }
+    .external-socialmedia-buttons .google-button button {
+        background-image: url(../images/buttons/google-login-button.svg);
+        background-repeat: no-repeat;
+        border: none;
+        height: 42px;
+        width: 235px;
+    }
+    
+    .external-socialmedia-buttons .facebook-button button:hover,
+    .external-socialmedia-buttons .google-button button:hover {
+        filter: brightness(90%);
+    }
+
+
+.thirty-off {
+    background-color: var(--color-gray-3);
+}
+    .thirty-off .container {
+        text-align: center;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .thirty-off .thirty-off-stripe {
+        background-color: var(--color-theme);
+        border: 1px solid black;
+    }
+
+        .thirty-off .thirty-off-stripe h1 {
+            font-size: var(--font-size-36);
+            font-family: var(--font-play);
+            color: var(--color-white);
+        }
+            .thirty-off .thirty-off-stripe h1 strong {
+                font-size: var(--font-size-60);
             }
 
-            .signup-signin .card .card-body .card-text {
-                margin: 1.5rem 0;
-                line-height: 2;
+            .thirty-off .thirty-off-stripe p {
+                color: var(--color-white);
             }
-
-                .signup-signin .card .card-body .card-text.text-small {
-                    color: var(--color-gray-5);
-                    font-size: 0.875rem;
-                }
-
-
-
-
-
-
-
-
-
 
 
 
